@@ -57,13 +57,14 @@
     font-weight: 600;
 }
 
-.signup-input {
-    width: 100%;
-    padding: 10px;
+/* Removed duplicate .signup-input, the first one is more detailed and will be used. */
+/* Ensure the first .signup-input definition includes:
+    width: 100%; (or ensure form itself constrains width)
+    box-sizing: border-box; (good practice)
+   The existing first one already has:
+    padding: 12px 15px;
     margin-bottom: 15px;
-    /* This applies to all inputs: username, email, password */
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 16px;
-    box-sizing: border-box;
-}
+*/
