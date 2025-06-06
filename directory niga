@@ -1,0 +1,56 @@
+blog-frontend/
+│
+├── node_modules/
+│
+├── public/
+│   ├── index.html
+│   └── ...
+│
+├── src/
+│   ├── components/
+│   │   ├── Signup.js
+│   │   ├── Signup.css
+│   │   ├── Login.js
+│   │   ├── Login.css
+│   │   ├── Dashboard.js
+│   │   ├── Dashboard.css
+│   │   ├── CreateBlog.js
+│   │   └── CreateBlog.css
+│   │
+│   ├── App.js
+│   ├── index.js
+│   └── index.css
+│
+├── package.json
+├── package-lock.json
+└── README.md
+
+
+npx create-react-app blog-frontend
+cd blog-frontend
+npm install axios react-router-dom 
+
+--------------------------
+
+mkdir blog-backend
+cd blog-backend
+npm init -y
+npm install express mongoose bcryptjs jsonwebtoken cors dotenv
+
+blog-backend/
+│
+├── models/
+│   ├── User.js
+│   └── Blog.js
+│
+├── routes/
+│   ├── auth.js
+│   └── blogs.js
+│
+├── middleware/
+│   └── auth.js
+│
+├── .env
+├── server.js
+└── package.json
+

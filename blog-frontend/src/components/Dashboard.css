@@ -1,0 +1,67 @@
+.dashboard-container {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 25px 30px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    background-color: #e9f7ef;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-title {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 25px;
+}
+
+.dashboard-message {
+    text-align: center;
+    color: #d32f2f;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.dashboard-no-blogs {
+    text-align: center;
+    color: #555;
+    font-style: italic;
+}
+
+.dashboard-blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.dashboard-blog-item {
+    border-bottom: 1px solid #aaa;
+    padding: 15px 0;
+}
+
+.dashboard-blog-item h3 {
+    margin: 0 0 8px 0;
+    color: #388e3c;
+}
+
+.dashboard-blog-item p {
+    margin: 0;
+    color: #444;
+}
+
+.create-blog-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 10px 18px;
+    background-color: #2e7d32;
+    /* matching dashboard title color */
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.create-blog-link:hover {
+    background-color: #27642a;
+    /* darker shade on hover */
+}

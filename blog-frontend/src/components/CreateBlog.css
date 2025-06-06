@@ -1,0 +1,91 @@
+.createblog-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 25px 30px;
+    border: 1px solid #b0bec5;
+    border-radius: 12px;
+    background-color: #e3f2fd;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.createblog-title {
+    text-align: center;
+    color: #0d47a1;
+    margin-bottom: 20px;
+}
+
+.createblog-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.createblog-input {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #90caf9;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.createblog-input:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+
+.createblog-textarea {
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid #90caf9;
+    border-radius: 6px;
+    resize: vertical;
+    transition: border-color 0.3s ease;
+}
+
+.createblog-textarea:focus {
+    border-color: #1976d2;
+    outline: none;
+}
+
+.createblog-button {
+    padding: 12px;
+    background-color: #1976d2;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.createblog-button:hover {
+    background-color: #0d47a1;
+}
+
+.createblog-message {
+    margin-top: 15px;
+    text-align: center;
+    color: #2e7d32;
+    /* green for success */
+    font-weight: 600;
+}
+
+.createblog-dashboard-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 18px;
+    background-color: #0d47a1;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.createblog-dashboard-link:hover {
+    background-color: #1976d2;
+}
