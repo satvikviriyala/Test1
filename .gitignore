@@ -1,0 +1,24 @@
+# Dependencies
+node_modules/
+**/node_modules/
+
+# Environment variables
+.env
+blog-backend/.env
+
+# Production build artifacts
+build/
+blog-frontend/build/
+
+# Test coverage
+coverage/
+
+# OS-specific files
+.DS_Store
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.swp

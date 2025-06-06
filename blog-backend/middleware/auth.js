@@ -1,22 +1,28 @@
 const jwt = require('jsonwebtoken');
 
-const JWT_SECRET = process.env.JWT_SECRET || 'yoursecretkey';
-
 function auth(req, res, next) {
-    const token = req.header('Authorization');
+    const authHeader = req.header('Authorization');
 
-    if (!token) {
+    if (!authHeader) {
         return res.status(401).json({ message: 'No token, authorization denied' });
     }
 
-    try {
-        // Remove "Bearer " if token is sent as "Bearer <token>"
-        const actualToken = token.startsWith('Bearer ') ? token.slice(7, token.length).trim() : token;
+    const tokenParts = authHeader.split(' ');
 
-        const decoded = jwt.verify(actualToken, JWT_SECRET);
-        req.user = decoded.userId;
+    if (tokenParts.length !== 2 || tokenParts[0] !== 'Bearer') {
+        return res.status(401).json({ message: 'Token format is "Bearer <token>"' });
+    }
+
+    const token = tokenParts[1];
+
+    try {
+        // JWT_SECRET should be set in environment variables
+        // If process.env.JWT_SECRET is undefined, jwt.verify will throw an error
+        const decoded = jwt.verify(token, process.env.JWT_SECRET);
+        req.user = decoded.userId; // Assuming your JWT payload has userId
         next();
     } catch (err) {
+        console.error("JWT Error:", err.message);
         res.status(401).json({ message: 'Token is not valid' });
     }
 }
